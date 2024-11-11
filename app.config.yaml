@@ -13,7 +13,7 @@ application:
             inputs:
               LOG_LEVEL: debug
             annotations:
-              require-adobe-auth: false
+              require-adobe-auth: true
               final: true
           publish-events:
             function: actions/publish-events/index.js
