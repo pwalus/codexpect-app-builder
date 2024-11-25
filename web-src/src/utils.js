@@ -1,4 +1,4 @@
-/* 
+/*
 * <license header>
 */
 
@@ -52,6 +52,23 @@ async function actionWebInvoke (actionUrl, headers = {}, params = {}, options = 
     // response is not json
   }
   return content
+}
+
+export async function callAction(props, action, body = {}) {
+  const actions = require('./config.json')
+  const res = await fetch(actions[action], {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-gw-ims-org-id': props.ims.org,
+      'authorization': `Bearer ${props.ims.token}`
+    },
+    body: JSON.stringify({
+      ...body
+    })
+  })
+
+  return await res.json()
 }
 
 export default actionWebInvoke

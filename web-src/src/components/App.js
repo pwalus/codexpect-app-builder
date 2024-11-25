@@ -1,4 +1,4 @@
-/* 
+/*
 * <license header>
 */
 
@@ -10,6 +10,7 @@ import SideBar from './SideBar'
 import ActionsForm from './ActionsForm'
 import { Home } from './Home'
 import { About } from './About'
+import {Product} from './Product'
 
 function App (props) {
   console.log('runtime object:', props.runtime)
@@ -48,6 +49,7 @@ function App (props) {
                 <Route path='/' element={<Home />} />
                 <Route path='/actions' element={<ActionsForm runtime={props.runtime} ims={props.ims} />}/>
                 <Route path='/about' element={<About />}/>
+                <Route path='/product' element={<Product ims={props.ims} />}/>
               </Routes>
             </View>
           </Grid>
