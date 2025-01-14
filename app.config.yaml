@@ -22,6 +22,8 @@ application:
             inputs:
               LOG_LEVEL: debug
               apiKey: $SERVICE_API_KEY
+              providerId: acbdaea7-d8a7-4a80-bd1e-355f88c2b779
+              eventCode: com.postman.productsold
             annotations:
               require-adobe-auth: true
               final: true

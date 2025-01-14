@@ -1,0 +1,10 @@
+{
+  "runtime_action": "codexpect/__secured_generic",
+  "name": "Postman Sync",
+  "description": "Sample description",
+  "delivery_type": "webhook",
+  "events_of_interest": [{
+    "provider_id": "acbdaea7-d8a7-4a80-bd1e-355f88c2b779",
+    "event_code": "com.postman.productsold"
+  }]
+}
