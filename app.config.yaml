@@ -41,3 +41,4 @@ application:
             annotations:
               require-adobe-auth: true
               final: true
+
